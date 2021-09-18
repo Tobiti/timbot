@@ -241,7 +241,7 @@ TwitchMonitor.onChannelLiveUpdate((streamData) => {
 
                     // Expand the message with a @mention for "here" or "everyone"
                     // We don't do this in updates because it causes some people to get spammed
-                    let mentionMode = (config.discord_mentions && config.discord_mentions[streamData.user_name.toLowerCase()]) || null;
+                    let mentionMode = (configmain.discord_mentions && configmain.discord_mentions[streamData.user_name.toLowerCase()]) || null;
 
                     if (mentionMode) {
                         mentionMode = mentionMode.toLowerCase();
